@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+require('dotenv').config();
+
+const nextConfig = {
+    reactStrictMode: true,
+    env: {
+        GH_ACCESS_TOKEN: process.env.GH_ACCESS_TOKEN,
+        DISCUSSION_CATEGORY_ID: process.env.DISCUSSION_CATEGORY_ID
+    },
+}
 
 module.exports = nextConfig
