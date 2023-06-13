@@ -1,12 +1,12 @@
 export function discussionGql(ghDiscussionCategoryId: string | undefined) {
   return `{
-  repository(name:"Dev-Blogs", owner: "yendoan2001") {
-    discussions(categoryId: "${ghDiscussionCategoryId}", first: 100) {
-      edges {
-        node {
+   repository(name: "Dev-Blogs", owner: "yendoan2001") {
+    discussions(categoryId: "DIC_kwDOJuNPo84CXJDp", first: 100) {
+        nodes {
           title
           url
           bodyHTML
+          number
           bodyText
           createdAt
           lastEditedAt
@@ -23,6 +23,5 @@ export function discussionGql(ghDiscussionCategoryId: string | undefined) {
         }
       }
     }
-  }
   }`
 }
